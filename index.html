@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SafeIt — Your passwords, locked down.</title>
+<meta name="description" content="SafeIt is a local-first password manager. Free is capped at 2 accounts — go Pro for unlimited accounts, browser autofill, full export, every theme, and 2 device activations.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mesh"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="" class="brand-icon">
+      <span class="brand-name">SafeIt</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-manage-devices">Manage License</button>
+      <a href="#pricing" class="btn btn-primary btn-sm">Get Pro</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-text reveal">
+      <span class="eyebrow">Local-first password manager</span>
+      <h1 class="gradient-text">Your passwords.<br>Locked down.</h1>
+      <p class="hero-sub">
+        SafeIt keeps every account locked down right on your device.
+        No cloud, no server holding your vault — just one master
+        password standing between the world and your logins.
+      </p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn-ghost btn-lg js-download">Download Free</button>
+        <a href="#pricing" class="btn btn-primary btn-lg">Get SafeIt Pro</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>Local-only</strong><span>vault, no cloud ever</span></div>
+        <div class="stat"><strong>100%</strong><span>offline &amp; local</span></div>
+        <div class="stat"><strong>2</strong><span>accounts on Free — unlimited on Pro</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" id="heroVisual">
+      <div class="mock-window">
+        <div class="mock-tb">
+          <span class="mock-dot mock-red"></span>
+          <span class="mock-dot mock-yellow"></span>
+          <span class="mock-dot mock-green"></span>
+          <span class="mock-tb-title">SafeIt</span>
+        </div>
+        <div class="mock-body">
+          <div class="mock-sidebar">
+            <div class="mock-search"></div>
+            <div class="mock-row mock-row-active"><span class="mock-avatar" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"></span><span class="mock-lines"><i></i><i></i></span></div>
+            <div class="mock-row"><span class="mock-avatar" style="background:#FF453A"></span><span class="mock-lines"><i></i><i></i></span></div>
+            <div class="mock-row"><span class="mock-avatar" style="background:#30D158"></span><span class="mock-lines"><i></i><i></i></span></div>
+            <div class="mock-row"><span class="mock-avatar" style="background:#FF9F0A"></span><span class="mock-lines"><i></i><i></i></span></div>
+          </div>
+          <div class="mock-detail">
+            <div class="mock-detail-header">
+              <span class="mock-avatar-lg" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"></span>
+              <span class="mock-lines"><i style="width:120px"></i><i style="width:70px"></i></span>
+            </div>
+            <div class="mock-field"></div>
+            <div class="mock-field"></div>
+            <div class="mock-field short"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mock-glow"></div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <h2 class="section-title reveal">Built to disappear into the background</h2>
+    <p class="section-sub reveal">No bloat, no telemetry, no excuses — just a vault that works every time you reach for it.</p>
+
+    <div class="grid features-grid">
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="9" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Strong local encryption</h3>
+        <p>Every account is sealed before it ever touches disk. Nothing leaves your device unencrypted.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="4.5" stroke="currentColor" stroke-width="1.6"/><path d="M12.2 12.2L19 19M15 19l1.5-1.5M17.5 16.5L19 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>One master password</h3>
+        <p>A single password unlocks your whole vault. It's never sent anywhere — not even to us.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 9.5h16M9.5 9.5V20" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <h3>Browser autofill <span class="pro-tag">Pro</span></h3>
+        <p>The companion extension talks to SafeIt over a local-only connection to fill logins as you browse.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 010 16 4 4 0 010-8 2 2 0 000-4 8 8 0 010 0" fill="currentColor" opacity=".25"/></svg>
+        </div>
+        <h3>Six accent themes <span class="pro-tag">Pro</span></h3>
+        <p>Pick a color and watch the whole interface adapt instantly. Free includes the classic Blue theme.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11M12 15l-4-4M12 15l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>JSON export <span class="pro-tag">Pro</span></h3>
+        <p>Import accounts anytime on any plan. Pro adds full JSON export for backups, with zero lock-in.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17a4 4 0 010-8 5 5 0 019.6-1.5A4.5 4.5 0 0117.5 17H7z" stroke="currentColor" stroke-width="1.6"/><path d="M4 4l16 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>100% offline</h3>
+        <p>No accounts, no servers, no telemetry. Your vault lives only where you put it.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 4.5l6.5 2.4v4.7c0 4.1-2.7 6.8-6.5 8.3-3.8-1.5-6.5-4.2-6.5-8.3V6.9L12 4.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.7 12.3l2.2 2.2 4.4-4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Vault Health <span class="pro-tag">Pro</span></h3>
+        <p>A fully offline scan flags weak and reused passwords across your vault, with one click to fix each.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 5 5.6.8-4 4 1 5.5L12 16l-5 2.3 1-5.5-4-4 5.6-.8L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Tags &amp; favorites <span class="pro-tag">Pro</span></h3>
+        <p>Pin the accounts you use daily to the top and tag the rest — built for vaults with way more than 2 accounts.</p>
+      </article>
+
+      <article class="card feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Custom auto-lock <span class="pro-tag">Pro</span></h3>
+        <p>Free locks after a fixed 5 minutes. Pro lets you choose anywhere from 1 minute to never.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section theme-demo">
+    <div class="card theme-demo-card reveal">
+      <div class="theme-demo-text">
+        <h3>This page themes itself — just like the app</h3>
+        <p>SafeIt lets you re-color the whole interface from Settings. Try it here.</p>
+      </div>
+      <div class="theme-picker" id="themePicker">
+        <button class="swatch" data-theme="blue"   style="background:#0A84FF" title="Blue"></button>
+        <button class="swatch" data-theme="red"    style="background:#FF453A" title="Red"></button>
+        <button class="swatch" data-theme="green"  style="background:#30D158" title="Green"></button>
+        <button class="swatch" data-theme="yellow" style="background:#FFD60A" title="Yellow"></button>
+        <button class="swatch" data-theme="orange" style="background:#FF9F0A" title="Orange"></button>
+        <button class="swatch" data-theme="white"  style="background:#D8D8E8" title="White"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title reveal">From checkout to activation in three steps</h2>
+    <p class="section-sub reveal">A SafeIt Pro license is a single key — no accounts to create, nothing else to remember.</p>
+
+    <div class="grid steps-grid">
+      <div class="card step-card reveal">
+        <span class="step-num">1</span>
+        <h3>Buy a license</h3>
+        <p>Choose Pro below and complete checkout — it's a one-time purchase, not a subscription.</p>
+      </div>
+      <div class="card step-card reveal">
+        <span class="step-num">2</span>
+        <h3>Get your key</h3>
+        <p>Your license key lands in your inbox right after payment, ready to copy and paste.</p>
+      </div>
+      <div class="card step-card reveal">
+        <span class="step-num">3</span>
+        <h3>Activate the app</h3>
+        <p>Enter it once when SafeIt first opens. Pro activates on up to 2 devices — log in with your key anytime to see and manage them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <h2 class="section-title reveal">Simple pricing, no subscriptions</h2>
+    <p class="section-sub reveal">Use SafeIt for free, forever — or pay once and unlock every feature for good.</p>
+
+    <div class="grid pricing-grid">
+      <div class="card pricing-card reveal">
+        <div class="pricing-head">
+          <h3>Free</h3>
+          <div class="price"><span class="price-amount">$0</span></div>
+          <p class="price-sub">Try it for as long as you want.</p>
+        </div>
+        <ul class="pricing-list">
+          <li>Capped at <strong>2 accounts</strong></li>
+          <li>Locally encrypted vault</li>
+          <li>1 accent theme (Blue only)</li>
+          <li>Import accounts from JSON</li>
+          <li>Fixed 5-minute auto-lock</li>
+          <li class="locked">No JSON export</li>
+          <li class="locked">No browser autofill extension</li>
+          <li class="locked">5 accent themes locked</li>
+          <li class="locked">No tags or favorites</li>
+          <li class="locked">No Vault Health check</li>
+        </ul>
+        <button type="button" class="btn btn-ghost btn-block js-download">Download Free</button>
+      </div>
+
+      <div class="card pricing-card pricing-pro reveal">
+        <span class="pricing-badge">Unlock everything</span>
+        <div class="pricing-head">
+          <h3>Pro</h3>
+          <div class="price"><span class="price-amount">$19.9</span><span class="price-period">one-time</span></div>
+          <p class="price-sub">One license. Every device. Forever.</p>
+        </div>
+        <ul class="pricing-list">
+          <li><strong>Unlimited</strong> accounts — never delete an old login to make room</li>
+          <li>All <strong>6 accent themes</strong> — make SafeIt look like yours</li>
+          <li><strong>Browser autofill</strong> — the extension fills logins as you browse — <button type="button" class="inline-link js-install-extension">install extension</button></li>
+          <li>Full <strong>JSON export</strong> — back up or migrate your whole vault anytime</li>
+          <li><strong>Vault Health check</strong> — catch weak &amp; reused passwords, fully offline</li>
+          <li><strong>Tags &amp; favorites</strong> — organize and pin the accounts you use most</li>
+          <li><strong>Custom auto-lock</strong> — from 1 minute up to never</li>
+          <li>Activates on <strong>up to 2 devices</strong> — <button type="button" class="inline-link js-manage-devices">manage them anytime</button></li>
+          <li><strong>One-time payment</strong> — yours forever, never a subscription</li>
+          <li>Free updates for life</li>
+          <li>Priority email support</li>
+        </ul>
+        <button class="btn btn-primary btn-block" id="buyProBtn">Get SafeIt Pro</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2 class="section-title reveal">Frequently asked questions</h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">
+          What's different between Free and Pro?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>Free is capped at 2 accounts and the Blue theme, with no export and no browser autofill. Pro removes the account limit, unlocks all 6 themes, full JSON export, the browser autofill extension, tags &amp; favorites, the Vault Health check, and a customizable auto-lock timer — for a single one-time payment.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          How many devices can one license activate?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>Up to 2 devices per license. Switching to a new machine? <button type="button" class="inline-link js-manage-devices">Log in with your license key</button> to see which devices are using it and free up a slot.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What happens right after I buy?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>You'll receive your license key by email within minutes. Paste it into SafeIt the first time you open it to activate.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do I need to create an account?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>Not in the usual sense — on first launch SafeIt asks for a nickname and email just so we can reach you, but there's nothing to log into. Every later unlock only ever needs your master password, and that password never leaves your device.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you store my passwords on a server?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>No. SafeIt is local-first — your vault is encrypted and stored only on your own device, never on ours. The only things that ever reach our server are your license key (to activate Pro) and, optionally, the nickname/email from setup — never your master password or vault contents.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Does activating Pro need an internet connection?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>Briefly, yes — activating (and occasionally re-checking) your license key needs to reach our license server. Your vault and passwords never do; they stay local and offline no matter what.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Is Pro a subscription?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>No. It's a single one-time payment for a license key that's yours to keep.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Which platforms are supported?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a"><p>Windows and macOS today.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-final">
+    <div class="card cta-card reveal">
+      <h2>Ready to lock things down?</h2>
+      <p>Start free, then go Pro to unlock unlimited accounts, every theme, autofill, and full export.</p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn-ghost btn-lg js-download">Download Free</button>
+        <a href="#pricing" class="btn btn-primary btn-lg">Get SafeIt Pro</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="" class="brand-icon">
+      <span class="brand-name">SafeIt</span>
+    </div>
+    <p>© 2026 SafeIt. Your vault, your device, your rules.</p>
+    <div class="footer-links">
+      <a href="mailto:support@safeit.app">Contact</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+      <button type="button" class="footer-link-btn js-manage-devices">My License</button>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="downloadModalOverlay">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="downloadModalTitle">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <h3 id="downloadModalTitle">Choose your platform</h3>
+    <p class="modal-sub">SafeIt Free, no account required.</p>
+    <div class="modal-os-grid">
+      <a class="os-choice" data-os="windows" download>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.4L10.5 4.3V11.4H3V5.4Z"/><path d="M11.5 4.1L21 2.7V11.3H11.5V4.1Z"/><path d="M3 12.4H10.5V19.6L3 18.5V12.4Z"/><path d="M11.5 12.4H21V21.2L11.5 19.8V12.4Z"/></svg>
+        <span>Windows</span>
+        <small>Windows 10/11, 64-bit</small>
+      </a>
+      <a class="os-choice" data-os="mac" download>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.7 12.7c0-2.1 1.7-3.1 1.8-3.2-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.5.8-3.2.8-.7 0-1.7-.7-2.9-.7-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.1 9.3.7 1.1 1.6 2.3 2.7 2.3 1.1 0 1.4-.7 2.7-.7 1.3 0 1.6.7 2.7.7s1.9-1.1 2.6-2.2c.8-1.3 1.2-2.5 1.2-2.6-.1 0-2.8-1.1-2.8-4.1z"/><path d="M14.8 5.6c.6-.7 1-1.7.9-2.7-.9.1-1.9.6-2.5 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
+        <span>macOS</span>
+        <small>Apple Silicon &amp; Intel</small>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="extensionModalOverlay">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="extensionModalTitle">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <h3 id="extensionModalTitle">Choose your browser</h3>
+    <p class="modal-sub">Requires SafeIt Pro activated in the desktop app.</p>
+    <div class="modal-os-grid">
+      <a class="os-choice" data-browser="chrome" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/><path d="M12 3v6M12 15v6M4.5 7.5l5.2 3M19.5 7.5l-5.2 3M4.5 16.5l5.2-3M19.5 16.5l-5.2-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span>Chrome</span>
+        <small>Also works in Edge &amp; Brave</small>
+      </a>
+      <a class="os-choice" data-browser="firefox" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 2 3.5 2.7 3.5 5.7 0 1-.4 1.8-.9 2.4 1.6.2 2.9 1.6 2.9 3.6 0 3.7-3.4 7.3-7.5 7.3S2.5 17.4 2.5 13.7c0-2.6 1.6-4.6 3.6-5.6-.3-.6-.4-1.2-.4-1.8 0-2 1.3-3.4 2.3-4.3-.1.9.1 1.7.6 2.3.4-1 1-1.7 1.4-2.3-.1.7 0 1.4.4 2 .5-.7 1.1-1.3 1.6-2z"/></svg>
+        <span>Firefox</span>
+        <small>Desktop only</small>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="licenseModalOverlay">
+  <div class="modal-card modal-card-license" role="dialog" aria-modal="true" aria-labelledby="licenseModalTitle">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <h3 id="licenseModalTitle">Manage your license</h3>
+
+    <div id="licenseLoginView">
+      <p class="modal-sub">Log in with your license key to see how many devices are using it.</p>
+      <div class="field">
+        <input id="licenseLoginInput" class="license-input" type="text" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" maxlength="23" autocomplete="off" spellcheck="false">
+      </div>
+      <p class="modal-err" id="licenseLoginErr"></p>
+      <button type="button" class="btn btn-primary btn-block" id="licenseLoginBtn">Log in</button>
+    </div>
+
+    <div id="licenseDevicesView" style="display:none">
+      <p class="modal-sub">Pro license</p>
+      <div class="device-summary">
+        <strong id="deviceCount">0 / 2</strong>
+        <span>devices activated</span>
+      </div>
+      <ul class="device-list" id="deviceList"></ul>
+      <p class="modal-err" id="deviceErr"></p>
+      <button type="button" class="btn btn-ghost btn-block" id="licenseLogoutBtn">Log out</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

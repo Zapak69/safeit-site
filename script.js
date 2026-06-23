@@ -104,21 +104,36 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
 });
 
-const GITHUB_REPO = 'safeit-app/safeit';
+const GITHUB_REPO    = 'Zapak69/safeit-site';
+const RELEASE_TAG    = 'SafeIt';
+const RELEASE_BASE   = `https://github.com/${GITHUB_REPO}/releases/download/${RELEASE_TAG}`;
 const DOWNLOAD_LINKS = {
-  windows: `https://github.com/${GITHUB_REPO}/releases/latest/download/SafeIt-Setup.exe`,
-  mac:     `https://github.com/${GITHUB_REPO}/releases/latest/download/SafeIt.dmg`,
+  windows:   `${RELEASE_BASE}/SafeIt.Setup.exe`,
+  'mac-arm': `${RELEASE_BASE}/SafeIt-arm64.dmg`,
+  'mac-intel': `${RELEASE_BASE}/SafeIt.dmg`,
 };
 document.querySelectorAll('#downloadModalOverlay .os-choice').forEach(a => { a.href = DOWNLOAD_LINKS[a.dataset.os]; });
 
 const downloadModalOverlay = document.getElementById('downloadModalOverlay');
+const downloadChooseView   = document.getElementById('downloadChooseView');
+const downloadMacView      = document.getElementById('downloadMacView');
+
+function resetDownloadModal() {
+  downloadChooseView.style.display = 'block';
+  downloadMacView.style.display = 'none';
+}
 document.querySelectorAll('.js-download').forEach(btn => {
-  btn.addEventListener('click', () => openModal(downloadModalOverlay));
+  btn.addEventListener('click', () => { resetDownloadModal(); openModal(downloadModalOverlay); });
 });
+document.getElementById('macChoiceBtn')?.addEventListener('click', () => {
+  downloadChooseView.style.display = 'none';
+  downloadMacView.style.display = 'block';
+});
+document.getElementById('macBackBtn')?.addEventListener('click', resetDownloadModal);
 
 const EXTENSION_LINKS = {
-  chrome:  'https://chromewebstore.google.com/detail/REPLACE_WITH_CHROME_STORE_ID',
-  firefox: 'https://addons.mozilla.org/firefox/addon/REPLACE_WITH_FIREFOX_SLUG',
+  chrome:  `${RELEASE_BASE}/safeit-chrome.zip`,
+  firefox: `${RELEASE_BASE}/safeit-firefox.xpi`,
 };
 document.querySelectorAll('#extensionModalOverlay .os-choice').forEach(a => { a.href = EXTENSION_LINKS[a.dataset.browser]; });
 
